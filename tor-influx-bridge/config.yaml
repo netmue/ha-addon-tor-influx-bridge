@@ -1,0 +1,15 @@
+name: "Tor InfluxDB Bridge"
+version: "1.0"
+slug: "tor_influx_bridge"
+description: "Leitet lokalen Port zu einer entfernten InfluxDB über Tor weiter"
+startup: services
+boot: auto
+init: false
+options:
+  onion_host: "deineinfluxdb.onion"
+  remote_port: 8086
+  local_port: 18086
+schema:
+  onion_host: str
+  remote_port: int
+  local_port: int
